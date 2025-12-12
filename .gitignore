@@ -39,7 +39,7 @@ server-application/keys/
 *.log
 
 # Test files
-test_*.py
+# test_*.py
 *_test.py
 compare_*.py
 simple_*.py
