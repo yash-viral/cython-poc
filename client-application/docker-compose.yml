@@ -1,0 +1,23 @@
+# Docker Compose for Licensed Application
+version: '3.8'
+
+services:
+  licensed-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: licensed-app:1.0
+    container_name: licensed-app
+    volumes:
+      # Mount license file from host - allows renewal without rebuild
+      - ./license.lic:/app/license.lic:ro
+    environment:
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+    # Optional: network isolation for security
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+*.egg-info/
+dist/
+build/
+.Python
+env/
+venv/
+.venv/
+.env
+
+# Cython
+*.c
+*.html
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Keys (for production)
+server-application/keys/
+*.pem
+*.key
+
+# Licenses (for production)
+*.lic
+
+# Logs
+*.log
+
+# Test files
+test_*.py
+*_test.py
+compare_*.py
+simple_*.py
