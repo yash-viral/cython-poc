@@ -45,8 +45,8 @@ COPY controllers/ ./controllers/
 COPY utils/ ./utils/
 COPY main.py .
 
-# Copy public key (embedded in compiled module in production, but we keep a fallback)
-COPY pub.pem .
+# Copy public key if it exists (optional - can be embedded in compiled module)
+COPY pub.pe[m] ./
 
 # License file will be mounted at runtime
 # docker run -v /path/to/license.lic:/app/license.lic licensed-app:1.0
